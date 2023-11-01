@@ -45,6 +45,7 @@ To use this project, follow these steps:
         - RTDB URL (Real-Time Database URL)
 
 2. **Arduino Project Setup:**
+    - Set up the NodeMCU ESP12f with the necessary components (light-dependent resistor and LED lamp).
     - Open the Arduino project located in the `Smart-Lighting/arduino/Pametna rasvjeta` directory.
     - Ensure you have the Arduino IDE installed.
     - Connect your NodeMCU ESP12f to your computer.
@@ -64,7 +65,7 @@ To use this project, follow these steps:
 
     - Upload the modified Arduino sketch to the NodeMCU ESP12f.
 
-3. **HTML Page:**
+4. **HTML Page:**
     - Open the `Smart-Lighting/index.html` file in your preferred web browser.
     - Update the Firebase configuration in the HTML file by modifying the following section:
 
