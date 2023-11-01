@@ -44,6 +44,8 @@ To use this project, follow these steps:
         - Firebase project API Key
         - RTDB URL (Real-Time Database URL)
 
+    If you prefer, you can use my pre-made Firebase project by clicking [here](https://console.firebase.google.com/u/0/project/iot-seminarski-d5dbe/database/iot-seminarski-d5dbe-default-rtdb/data).
+
 2. **Arduino Project Setup:**
     - Set up the NodeMCU ESP12f with the necessary components (light-dependent resistor and LED lamp).
     - Open the Arduino project located in the `Smart-Lighting/arduino/Pametna rasvjeta` directory.
