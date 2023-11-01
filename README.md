@@ -37,9 +37,47 @@ The system offers the following functionalities:
 
 To use this project, follow these steps:
 
-1. Clone the repository to your local machine.
-2. Set up the NodeMCU ESP12f with the necessary components (light-dependent resistor and LED lamp).
-3. Configure the Firebase real-time database with your project settings.
-4. Deploy the web application to a hosting service or run it locally.
+1. **Firebase Configuration:**
+    - Set up a Firebase project at [Firebase Console](https://console.firebase.google.com/).
+    - Create a real-time database in Firebase.
+    - After setting up Firebase, obtain the following information from your Firebase project:
+        - Firebase project API Key
+        - RTDB URL (Real-Time Database URL)
+
+2. **Arduino Project Setup:**
+    - Open the Arduino project located in the `Smart-Lighting/arduino/Pametna rasvjeta` directory.
+    - Ensure you have the Arduino IDE installed.
+    - Connect your NodeMCU ESP12f to your computer.
+    - Before uploading the Arduino sketch (`Pametna rasvjeta.ino`) to the NodeMCU ESP12f, make the following changes in the code:
+
+        ```cpp
+        // Insert your network credentials
+        #define WIFI_SSID "your_wifi_name"
+        #define WIFI_PASSWORD "your_wifi_password"
+
+        // Insert Firebase project API Key
+        #define API_KEY "your_firebase_api_key"
+
+        // Insert RTDB URL (define the RTDB URL)
+        #define DATABASE_URL "your_firebase_database_url"
+        ```
+
+    - Upload the modified Arduino sketch to the NodeMCU ESP12f.
+
+3. **HTML Page:**
+    - Open the `Smart-Lighting/index.html` file in your preferred web browser.
+    - Update the Firebase configuration in the HTML file by modifying the following section:
+
+        ```javascript
+        const firebaseConfig = {
+          apiKey: "your_api_key",
+          authDomain: "your_auth_domain",
+          databaseURL: "your_database_url",
+          projectId: "your_project_id",
+          storageBucket: "your_storage_bucket",
+          messagingSenderId: "your_messaging_sender_id",
+          appId: "your_app_id",
+        };
+        ```
 
 **Note**: Please ensure that you have the required hardware components and understand how to set up and configure the NodeMCU ESP12f and Firebase before using this project.
